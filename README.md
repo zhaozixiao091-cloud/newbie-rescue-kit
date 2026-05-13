@@ -4,17 +4,17 @@
 
 ## 这是什么？
 
-GitHub 上有海量好项目，但 README 写得太"工程师"，新手常常卡在第一步环境配置就放弃。
-本工具用 AI 把任何 GitHub 项目的 README + Issues 翻译成新手能照着抄的分步教程：
+GitHub 上有很多好用的项目，但是对于一个想要使用相关项目的小白来说，往往卡在了读懂项目和环境配置这一步。
+本产品工具用 AI 把任何 GitHub 项目读取为新手也能轻松跟着做的分步教程，降低这些GitHub项目的使用门槛，帮助更多编程新手快速理解项目并借助项目完成自己的需求。
 
 - ✅ 针对你操作系统（macOS / Windows / Linux）的环境自检与一键安装脚本
-- ✅ 跑通第一个示例（Hello World）的最小流程
-- ✅ **内置 AI 报错诊断面板**：贴报错文字或截图，三层匹配（项目 Issues → AI 推断 → 联网搜索）
-- ✅ 把项目用到你自己的数据上的实操步骤
+- ✅ 跑通项目的第一个示例
+- ✅ **内置 AI 报错诊断面板**：遇到问题时贴报错文字或截图，使用三层匹配（项目 Issues → AI 推断 → 联网搜索）完美解决99%报错问题并给出通俗易懂的解决方案
+- ✅ 把项目用到你自己的数据上的实操步骤：真正掌握和使用优秀项目
 
 ## 在线 Demo
 
-> 本项目已在 Perplexity Computer 上部署了一份只读 Demo，UI 完全一致，无需自己跑：
+> 本项目已在 Perplexity上部署了一份只读 Demo，用户可以使用该链接进行体验：
 > https://www.perplexity.ai/computer/a/kai-yuan-xiang-mu-xin-shou-ji-zZBWmvqySKuISAF7xOvdLQ
 
 ## 项目结构
@@ -31,7 +31,7 @@ GitHub 上有海量好项目，但 README 写得太"工程师"，新手常常卡
 └── README.md
 ```
 
-## 本地快速启动
+## 如何把本项目配置到本地
 
 ### 1. 安装依赖
 
@@ -41,7 +41,7 @@ cd <仓库名>
 npm install
 ```
 
-### 2. 配置环境变量
+### 2. 配置环境变量和API
 
 ```bash
 cp .env.example .env
@@ -92,7 +92,7 @@ node server.js
 
 ## 已知限制
 
-- 教程生成约 30–90 秒，受 DeepSeek 响应速度影响
+- 教程生成约 30–90 秒，受 DeepSeek API 响应速度影响
 - 截图识别用 Tesseract.js（浏览器端 OCR），中文识别准确率有限，建议优先粘贴文字
 - GitHub API 未配 token 时容易触发 60 次/小时限额
 
