@@ -891,7 +891,7 @@
     startProgress();
 
     try {
-      const API_BASE = '__PORT_8000__'.startsWith('__') ? 'http://localhost:8000' : '__PORT_8000__';
+      const API_BASE = '';  // 前后端同域部署，用相对路径
       const res = await fetch(`${API_BASE}/api/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -1382,7 +1382,7 @@
     const stageEl = document.getElementById(cardId + "-stage");
 
     try {
-      const API_BASE = '__PORT_8000__'.startsWith('__') ? 'http://localhost:8000' : '__PORT_8000__';
+      const API_BASE = '';  // 前后端同域部署，用相对路径
       const ctx = (state.url || state.os) ? `项目地址：${state.url || "未设置"} · 系统：${state.os || "未设置"}` : "";
       const payload = {
         error_text: submittedText,
